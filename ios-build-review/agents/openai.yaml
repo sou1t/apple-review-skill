@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Build Review"
+  short_description: "Статический анализ IPA и XCArchive перед App Review"
+  default_prompt: "Используй $ios-build-review для проверки сборки по указанному пути и сохрани рекомендации в Markdown."
