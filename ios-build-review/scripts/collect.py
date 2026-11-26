@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect local evidence for Codex. Never execute the inspected product."""
+"""Collect local evidence from an iOS release artifact. Never execute the inspected product."""
 import argparse
 import json
 import os
