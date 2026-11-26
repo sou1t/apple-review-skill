@@ -6,7 +6,7 @@
 
 Отправьте агенту Codex это сообщение:
 
-> Установи персональный скилл ios-build-review из https://github.com/sou1t/apple-review-skill по инструкции в README. Проверь установленную копию.
+> Установи персональный скилл ios-build-review из https://github.com/sou1t/apple-review-skill по инструкции в README. Проверь, доступны ли в Codex оба связанных скилла. Установи недостающие по инструкциям ниже и проверь, что Codex видит все три.
 
 Агенту, выполняющему установку:
 
@@ -32,7 +32,7 @@ Codex вернёт ссылку на отчёт. Каталог для сохр�
 
 ## Связанные скиллы
 
-- `reverse-engineer-anything` — статический разбор локальных бинарников и ресурсов.
-- `app-store-compliance` — подбор относящихся к находке правил Apple с последующей сверкой на официальном сайте.
+- **reverse-engineer-anything** разбирает локальные бинарники и ресурсы. Если скилл отсутствует, выполни `npx rea-agents setup` из доверенного каталога и выбери Codex. Установщик подключает сервер REA MCP и устанавливает соответствующую версию скилла. [Официальная инструкция REA](https://github.com/morluto/rea#quick-start)
+- **app-store-compliance** помогает подобрать правила Apple для конкретной находки. Для установки самого скилла клонируй репозиторий и помести `agent-os/skill/SKILL.md` в `~/.agents/skills/app-store-compliance/SKILL.md`. Рядом скопируй из корня репозитория каталоги `docs/`, `data/`, `references/`, `templates/`, `scripts/` и файлы `.citation-allowlist`, `VERSION`. Для статического анализа сборки хук отправки не требуется. [Репозиторий App Store Compliance](https://github.com/mjmirza/app-store-compliance) · [Файл скилла](https://github.com/mjmirza/app-store-compliance/blob/main/agent-os/skill/SKILL.md)
 
 Codex использует эти скиллы, когда они установлены. Базовая методика и локальный сборщик входят в репозиторий. [Инструкции скилла](ios-build-review/SKILL.md) · [Методика анализа](ios-build-review/references/analysis.md)
